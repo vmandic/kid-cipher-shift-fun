@@ -45,7 +45,7 @@ const Index = () => {
           <div className="text-orange-600 space-y-2">
             <p>• <strong>Pomak udesno (R13):</strong> A postaje N, B postaje O, itd.</p>
             <p>• <strong>Pomak ulijevo (L3):</strong> D postaje A, E postaje B, itd.</p>
-            <p>• Brojevi i slova se pomiču, ali razmaci i interpunkcija ostaju isti!</p>
+            <p>• Hrvatska slova i brojevi se pomiču, ali razmaci i interpunkcija ostaju isti!</p>
             <p>• ROT13 je poseban slučaj gdje R13 = L13 (sam sebe dekodira!)</p>
           </div>
         </Card>
@@ -75,9 +75,9 @@ const Index = () => {
             🌟 Probaj ovaj primjer:
           </h2>
           <div className="text-indigo-600 space-y-2">
-            <p>Upiši: <code className="bg-white px-2 py-1 rounded font-mono">"Pozdrav Svijete 123!"</code></p>
-            <p>S R13: <code className="bg-white px-2 py-1 rounded font-mono">"Cbmqeni Fivwrgr 456!"</code></p>
-            <p>S L3: <code className="bg-white px-2 py-1 rounded font-mono">"Mlyqoxs Psfwrkr 890!"</code></p>
+            <p>Upiši: <code className="bg-white px-2 py-1 rounded font-mono">"Pozdrav iz Zagreba 123!"</code></p>
+            <p>S R13: <code className="bg-white px-2 py-1 rounded font-mono">"Cbmqeni fm Ženorue 456!"</code></p>
+            <p>S L3: <code className="bg-white px-2 py-1 rounded font-mono">"Mjvžoen fv Wžčošutž 890!"</code></p>
           </div>
         </Card>
       </div>
