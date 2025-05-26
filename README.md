@@ -1,73 +1,35 @@
-# Welcome to your Lovable project
+# 🔐 Cezarova šifra za znatiželjne! (Kid Cipher Shift Fun)
 
-## Project info
+[Isprobaj uživo!](https://kid-cipher-shift-fun.lovable.app/)
 
-**URL**: https://lovable.dev/projects/f1ca35b3-5565-4540-af7f-6ae838f73149
+Dobrodošli u zabavnu web aplikaciju za učenje i igru s Cezarovom šifrom, prilagođenu hrvatskoj abecedi i brojevima! Ova aplikacija omogućuje djeci (i odraslima) da kodiraju i dekodiraju tajne poruke, istražujući kako radi poznata Cezarova šifra.
 
-## How can I edit this code?
+## ✨ Što je Cezarova šifra?
+Cezarova šifra je jednostavna metoda šifriranja u kojoj se svako slovo u poruci zamjenjuje slovom koje se nalazi određeni broj mjesta dalje u abecedi. Ova aplikacija koristi hrvatsku abecedu (bez digrafa) i brojeve 0-9.
 
-There are several ways of editing your application.
+## 🚀 Kako koristiti aplikaciju?
+1. **Upiši svoju poruku** u predviđeno polje.
+2. **Odaberi smjer pomaka** (udesno ili ulijevo) i **broj mjesta** za pomak.
+3. **Pogledaj kodiranu poruku** i kopiraj je prijatelju!
 
-**Use Lovable**
+## 🧑‍🏫 Edukativne značajke
+- Podržava sva slova hrvatske abecede (a-ž, A-Ž) i brojeve (0-9).
+- Razmaci, interpunkcija i ostali znakovi ostaju nepromijenjeni.
+- Prikazuje primjere i objašnjenja kako šifra radi.
+- Idealan alat za učenje o osnovama kriptografije kroz igru!
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/f1ca35b3-5565-4540-af7f-6ae838f73149) and start prompting.
+## 🖥️ Tehnologije
+- [React](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📚 Više o Cezarovoj šifri
+Informacije o šifri preuzete s [Wikipedia: Caesar cipher](https://en.wikipedia.org/wiki/Caesar_cipher)
 
-**Use your preferred IDE**
+## 👨‍💻 Autor
+Izradio [Vedran Mandić](https://github.com/vmandic) — [GitHub projekt](https://github.com/vmandic/kid-cipher-shift-fun)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/f1ca35b3-5565-4540-af7f-6ae838f73149) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+Zabavite se kodirajući i dekodirajući poruke! 🕵️‍♂️✨

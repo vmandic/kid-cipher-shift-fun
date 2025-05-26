@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import CipherInput from '@/components/CipherInput';
 import ShiftControl from '@/components/ShiftControl';
@@ -29,10 +28,10 @@ const Index = () => {
         {/* Header */}
         <div className="text-center space-y-4">
           <h1 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-            🔐 Caesarova šifra za djecu! 🔐
+            🔐 Cezarova šifra za znatiželjne! 🔐
           </h1>
           <p className="text-lg text-gray-700 max-w-2xl mx-auto">
-            Stvaraj tajne poruke pomoću antičke Caesarove šifre! 
+            Stvaraj tajne poruke pomoću antičke Cezarove šifre! 
             Odaberi koliko slova želiš pomaknuti i kodiraj svoju poruku kao pravi špijun! 🕵️‍♀️
           </p>
         </div>
@@ -43,10 +42,16 @@ const Index = () => {
             🎓 Kako funkcionira:
           </h2>
           <div className="text-orange-600 space-y-2">
-            <p>• <strong>Pomak udesno (R13):</strong> A postaje N, B postaje O, itd.</p>
-            <p>• <strong>Pomak ulijevo (L3):</strong> D postaje A, E postaje B, itd.</p>
-            <p>• Hrvatska slova i brojevi se pomiču, ali razmaci i interpunkcija ostaju isti!</p>
-            <p>• ROT13 je poseban slučaj gdje R13 = L13 (sam sebe dekodira!)</p>
+            <p>• <strong>Pomak udesno (R13):</strong> {(() => {
+              const abeceda = 'A B C Č Ć D Đ E F G H I J K L M N O P R S Š T U V Z Ž';
+              const abecedaArr = abeceda.split(' ');
+              const shifted = abecedaArr.map(l => caesarEncode(l, 'R', 13)).join(' ');
+              return `A postaje ${caesarEncode('A', 'R', 13)}, B postaje ${caesarEncode('B', 'R', 13)}, itd.`;
+            })()}</p>
+            <p>• <strong>Pomak ulijevo (L3):</strong> {(() => {
+              return `D postaje ${caesarEncode('D', 'L', 3)}, E postaje ${caesarEncode('E', 'L', 3)}, itd.`;
+            })()}</p>
+            <p>• Latinična slova i brojevi se pomiču, ali razmaci i interpunkcija ostaju isti!</p>
           </div>
         </Card>
 
@@ -75,12 +80,36 @@ const Index = () => {
             🌟 Probaj ovaj primjer:
           </h2>
           <div className="text-indigo-600 space-y-2">
-            <p>Upiši: <code className="bg-white px-2 py-1 rounded font-mono">"Pozdrav iz Zagreba 123!"</code></p>
-            <p>S R13: <code className="bg-white px-2 py-1 rounded font-mono">"Cbmqeni fm Ženorue 456!"</code></p>
-            <p>S L3: <code className="bg-white px-2 py-1 rounded font-mono">"Mjvžoen fv Wžčošutž 890!"</code></p>
+            {(() => {
+              const exampleInput = 'Pozdrav iz Zagreba 123!';
+              const exampleR13 = caesarEncode(exampleInput, 'R', 13);
+              const exampleL3 = caesarEncode(exampleInput, 'L', 3);
+              return (
+                <>
+                  <p>Upiši: <code className="bg-white px-2 py-1 rounded font-mono">"{exampleInput}"</code></p>
+                  <p>S R13: <code className="bg-white px-2 py-1 rounded font-mono">"{exampleR13}"</code></p>
+                  <p>S L3: <code className="bg-white px-2 py-1 rounded font-mono">"{exampleL3}"</code></p>
+                </>
+              );
+            })()}
           </div>
         </Card>
       </div>
+      {/* Footer */}
+      <footer className="mt-8 mb-4 text-center text-gray-500 text-sm">
+        <div className='mb-2'>
+          Više informacija o Cezarovoj šifri: <a href="https://en.wikipedia.org/wiki/Caesar_cipher" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Wikipedia: Caesar cipher</a>
+        </div>
+        Izradio Vedran Mandić: {' '}
+        <a
+          href="https://github.com/vmandic/kid-cipher-shift-fun"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-blue-600 hover:underline"
+        >
+          GitHub projekt
+        </a>
+      </footer>
     </div>
   );
 };
