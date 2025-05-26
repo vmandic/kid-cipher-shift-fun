@@ -19,7 +19,7 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
         🔄 Odaberi pomak šifre:
       </Label>
       
-      <div className="flex items-center space-x-4">
+      <div className="flex flex-wrap items-center gap-4">
         <div className="flex space-x-2">
           <Button
             onClick={() => onDirectionChange('L')}
@@ -48,8 +48,8 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
           </Button>
         </div>
         
-        <div className="flex items-center space-x-2">
-          <Label htmlFor="shift-amount" className="text-purple-700 font-medium">
+        <div className="flex items-center space-x-2 min-w-0">
+          <Label htmlFor="shift-amount" className="text-purple-700 font-medium whitespace-nowrap">
             Pomakni za:
           </Label>
           <Input
@@ -59,7 +59,7 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
             max="25"
             value={amount}
             onChange={(e) => onAmountChange(Math.max(1, Math.min(25, parseInt(e.target.value) || 1)))}
-            className="w-20 text-center border-2 border-purple-300 focus:border-purple-500"
+            className="w-20 text-center border-2 border-purple-300 focus:border-purple-500 flex-shrink-0"
           />
         </div>
       </div>
