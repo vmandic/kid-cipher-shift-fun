@@ -18,27 +18,6 @@ export const caesarEncode = (text: string, direction: 'L' | 'R', amount: number)
         return String.fromCharCode(shifted + 65); // Convert back to letter
       }
       
-      // Handle extended Latin characters (à-ž, À-Ž)
-      if ((char >= 'à' && char <= 'ž') || (char >= 'À' && char <= 'Ž')) {
-        // For extended characters, we'll use a simple mapping
-        // This is a simplified approach for demonstration
-        const isUppercase = char >= 'À' && char <= 'Ž';
-        const baseChar = isUppercase ? 'A' : 'a';
-        const baseCode = baseChar.charCodeAt(0);
-        
-        // Convert extended character to basic equivalent for shifting
-        let basicChar = char.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-        if (basicChar >= 'a' && basicChar <= 'z') {
-          const code = basicChar.charCodeAt(0) - 97;
-          const shifted = (code + shift + 26) % 26;
-          return String.fromCharCode(shifted + 97);
-        } else if (basicChar >= 'A' && basicChar <= 'Z') {
-          const code = basicChar.charCodeAt(0) - 65;
-          const shifted = (code + shift + 26) % 26;
-          return String.fromCharCode(shifted + 65);
-        }
-      }
-      
       // Handle numbers (0-9)
       if (char >= '0' && char <= '9') {
         const code = char.charCodeAt(0) - 48; // Convert to 0-9

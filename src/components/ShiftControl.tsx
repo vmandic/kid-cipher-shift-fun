@@ -16,7 +16,7 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
   return (
     <div className="space-y-4 p-4 bg-gradient-to-r from-purple-100 to-pink-100 rounded-xl border-2 border-purple-300">
       <Label className="text-lg font-semibold text-purple-700">
-        🔄 Choose your cipher shift:
+        🔄 Odaberi pomak šifre:
       </Label>
       
       <div className="flex items-center space-x-4">
@@ -31,7 +31,7 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
             }`}
           >
             <ArrowLeft size={20} />
-            <span>Left (L)</span>
+            <span>Lijevo (L)</span>
           </Button>
           
           <Button
@@ -43,14 +43,14 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
                 : 'border-green-300 text-green-600 hover:bg-green-50'
             }`}
           >
-            <span>Right (R)</span>
+            <span>Desno (R)</span>
             <ArrowRight size={20} />
           </Button>
         </div>
         
         <div className="flex items-center space-x-2">
           <Label htmlFor="shift-amount" className="text-purple-700 font-medium">
-            Shift by:
+            Pomakni za:
           </Label>
           <Input
             id="shift-amount"
@@ -65,8 +65,8 @@ const ShiftControl = ({ direction, amount, onDirectionChange, onAmountChange }: 
       </div>
       
       <div className="text-sm text-purple-600 bg-white/50 p-2 rounded-lg">
-        Current setting: <strong>{direction}{amount}</strong>
-        {direction === 'L' ? ' (shifts letters to the left)' : ' (shifts letters to the right)'}
+        Trenutna postavka: <strong>{direction}{amount}</strong>
+        {direction === 'L' ? ' (pomiče slova ulijevo)' : ' (pomiče slova udesno)'}
       </div>
     </div>
   );
